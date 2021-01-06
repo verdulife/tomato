@@ -547,8 +547,8 @@ a.btn {
       -ms-user-select: none;
           user-select: none;
   -webkit-user-drag: none;
-  -webkit-box-shadow: -2px -2px 4px 0 #fafafa, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(24, 31, 28, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.15);
-          box-shadow: -2px -2px 4px 0 #fafafa, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(24, 31, 28, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.15);
+  -webkit-box-shadow: -2px -2px 4px 0 tomato, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(255, 99, 71, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.2);
+          box-shadow: -2px -2px 4px 0 tomato, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(255, 99, 71, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.2);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -585,7 +585,8 @@ a.dis {
 
 button.pri,
 a.pri {
-  background: #ffd000;
+  background: tomato;
+  color: #fafafa;
 }
 
 button.sec,
@@ -636,7 +637,7 @@ a.outdis {
 
 button.outpri,
 a.outpri {
-  color: #ffd000;
+  color: tomato;
 }
 
 button.outsec,
@@ -730,7 +731,7 @@ a.outerr {
 }
 
 .box.pri {
-  background: #ffd000;
+  background: tomato;
   color: #f7f7ff;
 }
 
@@ -2620,8 +2621,8 @@ textarea.black {
 }
 
 .check-active span {
-  background: #ffd000;
-  border-color: #ffd000;
+  background: tomato;
+  border-color: tomato;
 }
 
 *,
@@ -2658,17 +2659,7 @@ main {
 }
 
 body {
-  background: rgba(247, 247, 255, 0.8);
   color: #181f1c;
-}
-
-.topbar {
-  width: 100%;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: black;
 }
 
 body,
@@ -2691,7 +2682,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #ffd000;
+  color: tomato;
 }
 
 ul {
@@ -2719,5 +2710,86 @@ pre {
 pre.dark {
   background: #181f1c;
   color: #f7f7ff;
+}
+
+.topbar {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: black;
+}
+
+main img {
+  width: 120px;
+  margin-bottom: 5px;
+}
+
+main .time-each {
+  position: relative;
+  width: 275px;
+  background: #f7f7ff;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: -2px -2px 4px 0 #fafafa, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(250, 250, 250, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.4);
+          box-shadow: -2px -2px 4px 0 #fafafa, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(250, 250, 250, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.4);
+}
+
+main .time-stop {
+  position: relative;
+  width: 275px;
+  background: #f7f7ff;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: -2px -2px 4px 0 #fafafa, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(250, 250, 250, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.4);
+          box-shadow: -2px -2px 4px 0 #fafafa, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(250, 250, 250, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.4);
+}
+
+main .selector {
+  position: absolute;
+  top: 4px;
+  width: calc(100% / 4 - 8px);
+  height: calc(100% - 8px);
+  background: tomato;
+  border-radius: 30px;
+  -webkit-box-shadow: -2px -2px 4px 0 tomato, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(255, 99, 71, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.2);
+          box-shadow: -2px -2px 4px 0 tomato, inset 1px 1px 1px 0 rgba(250, 250, 250, 0.2), 2px 2px 4px 0 rgba(255, 99, 71, 0.2), inset -1px -1px 1px 0 rgba(24, 31, 28, 0.2);
+  -webkit-transition: 500ms ease-out;
+  transition: 500ms ease-out;
+}
+
+main .btn {
+  cursor: pointer;
+  width: calc(100% / 4);
+  padding: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .pos1 {
+  left: calc(0% + 4px);
+}
+
+main .pos2 {
+  left: calc(25% + 4px);
+}
+
+main .pos3 {
+  left: calc(50% + 4px);
+}
+
+main .pos4 {
+  left: calc(75% + 4px);
+}
+
+main button {
+  width: 130px;
 }
 /*# sourceMappingURL=bundle.css.map */

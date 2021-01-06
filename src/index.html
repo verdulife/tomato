@@ -3,16 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hello World!</title>
+  <title>tomato 🍅</title>
   <link rel="stylesheet" href="bundle.css">
 </head>
 
 <body>
-  <div class="topbar" style="-webkit-app-region: drag;"></div>
+  <main class="col fcenter">
+    <img src="../assets/tomato.svg" alt="tomato" style="-webkit-app-region: drag;">
+    <div class="time-each row jevenly">
+      <div class="selector row pos1"></div>
 
-  <main class="col">
-    <h1>Hello</h1>
-    <button class="sec semi" onclick="openModal()">Goes</button>
+      <div class="btn" onclick="timeEach(10)">10'</div>
+      <div class="btn" onclick="timeEach(20)">20'</div>
+      <div class="btn" onclick="timeEach(30)">30'</div>
+      <div class="btn" onclick="timeEach(40)">40'</div>
+    </div>
+
+    <div class="time-stop row jevenly">
+      <div class="selector row pos1"></div>
+
+      <div class="btn" onclick="timeStop(10)">10"</div>
+      <div class="btn" onclick="timeStop(20)">20"</div>
+      <div class="btn" onclick="timeStop(30)">30"</div>
+      <div class="btn" onclick="timeStop(60)">60"</div>
+    </div>
+
+    <button class="pri round" onclick="start()">EMPEZAR</button>
   </main>
 
   <script src="app.js" defer></script>
