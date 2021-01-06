@@ -1,0 +1,71 @@
+//reset
+input,
+select,
+textarea {
+  background: transparent;
+  padding: 12px 24px;
+  font-size: 12px;
+  font-weight: bold !important;
+  color: $base;
+  box-shadow: -2px -2px 4px 0 rgba($white, 1), inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($black, 0.2), inset -1px -1px 1px 0 rgba($black, 0.15);
+  transition: 0.2s;
+}
+
+//basics
+input.round,
+select.round,
+textarea.round {
+  border-radius: 30px;
+}
+input.semi,
+select.semi,
+textarea.semi {
+  border-radius: 10px;
+}
+input.out,
+select.out,
+textarea.out {
+  box-shadow: $neo-inset;
+}
+input.dis,
+select.dis,
+textarea.dis {
+  cursor: not-allowed;
+  background: $disabled;
+  color: $sub;
+}
+
+//colors
+input.white,
+select.white,
+textarea.white {
+  background: $white;
+}
+input.black,
+select.black,
+textarea.black {
+  background: $black;
+}
+
+//Custom checkbox
+.custom-check {
+  cursor: pointer;
+
+  span {
+    width: 14px;
+    height: 14px;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    box-shadow: -2px -2px 4px 0 rgba($white, 1), inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($black, 0.2), inset -1px -1px 1px 0 rgba($black, 0.15);
+    transition: 200ms;
+  }
+
+  &:not(.check-active):hover span {
+    background: $border;
+  }
+}
+
+.check-active span {
+  background: $pri;
+  border-color: $pri;
+}

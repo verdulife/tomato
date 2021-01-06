@@ -1,0 +1,33 @@
+//colors
+$pri: #ffd000;
+$sec: #5d5f71;
+$black: #181f1c;
+$white: #fafafa;
+$grey: #808080;
+
+//ui colors
+$bg: #f7f7ff;
+$border: #e6e6e6;
+
+//text
+$base: $black;
+$sub: $grey;
+
+//notificators
+$link: #2d8cf0;
+$success: #19be6b;
+$warning: #ff9900;
+$error: #ed3f14;
+$disabled: $border;
+
+//shadows
+$neo: 7px 7px 14px 0 rgba($black, 0.15), inset -1px -1px 1px 0 rgba($black, 0.15), -5px -5px 10px 0 rgba($white, 1), inset 0 0 0 1px rgba($border, 0.8);
+$neo-inset: inset -2px -2px 2px 0 rgba($white, 1), inset 2px 2px 2px 0 rgba($black, 0.15);
+$shadow: 0 1px 2px 0 rgba($black, 0.2);
+$shadow-hard: 0 1px 2px 0 rgba(#000, 0.9);
+$inset: inset 0 1px 2px 0 rgba($black, 0.2);
+$inset-hard: inset 0 1px 2px 0 rgba(#000, 0.9);
+
+//media queries
+$mobile: 600px;
+$tablet: 900px;

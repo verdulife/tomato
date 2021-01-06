@@ -1,0 +1,302 @@
+//parents
+.view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scroll {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.box {
+  border: 1px solid $border;
+}
+
+.box.round {
+  border-radius: 10px;
+}
+
+.box.white {
+  background: $white;
+  color: $base;
+}
+.box.black {
+  background: $black;
+  color: $bg;
+}
+.box.grey {
+  background: $grey;
+  color: $bg;
+}
+.box.border {
+  background: $border;
+  color: $base;
+}
+.box.pri {
+  background: $pri;
+  color: $bg;
+}
+.box.sec {
+  background: $sec;
+  color: $bg;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    user-select: none;
+  }
+
+  .slide {
+    display: inline-flex;
+
+    * {
+      white-space: normal;
+    }
+  }
+}
+
+//rows & cols
+.row {
+  width: auto;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.col {
+  width: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//dividers
+h-div {
+  width: 100%;
+  height: 1px;
+  display: flex;
+  background: $border;
+}
+
+v-div {
+  width: 1px;
+  height: 100%;
+  display: flex;
+  background: $border;
+}
+
+//alignments
+.jstart {
+  justify-content: flex-start;
+}
+.jcenter {
+  justify-content: center;
+}
+.jend {
+  justify-content: flex-end;
+}
+.jbetween {
+  justify-content: space-between;
+}
+.jaround {
+  justify-content: space-around;
+}
+.jevenly {
+  justify-content: space-evenly;
+}
+
+.astart {
+  align-items: flex-start;
+}
+.acenter {
+  align-items: center;
+}
+.astretch {
+  align-items: stretch;
+}
+.abase {
+  align-items: baseline;
+}
+.aend {
+  align-items: flex-end;
+}
+
+.fstart {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.fcenter {
+  justify-content: center;
+  align-items: center;
+}
+.fend {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+//sizes
+@mixin width-x {
+  @for $i from 1 through 100 {
+    .w#{$i} {
+      width: #{$i}#{"%"};
+    }
+  }
+}
+@include width-x();
+
+@mixin height-x {
+  @for $i from 1 through 100 {
+    .h#{$i} {
+      height: #{$i}#{"%"};
+    }
+  }
+}
+@include height-x();
+
+//spaces
+@mixin padding-x {
+  @for $i from 1 through 20 {
+    .p#{5 * $i} {
+      padding: #{5 * $i}px;
+    }
+  }
+}
+@include padding-x();
+
+@mixin padding-top-x {
+  @for $i from 1 through 20 {
+    .pt#{5 * $i} {
+      padding-top: #{5 * $i}px;
+    }
+  }
+}
+@include padding-top-x();
+
+@mixin padding-left-x {
+  @for $i from 1 through 20 {
+    .pl#{5 * $i} {
+      padding-left: #{5 * $i}px;
+    }
+  }
+}
+@include padding-left-x();
+
+@mixin padding-right-x {
+  @for $i from 1 through 20 {
+    .pr#{5 * $i} {
+      padding-right: #{5 * $i}px;
+    }
+  }
+}
+@include padding-right-x();
+
+@mixin padding-bottom-x {
+  @for $i from 1 through 20 {
+    .pb#{5 * $i} {
+      padding-bottom: #{5 * $i}px;
+    }
+  }
+}
+@include padding-bottom-x();
+
+@mixin margin-x {
+  @for $i from 1 through 20 {
+    .m#{5 * $i} {
+      margin: #{5 * $i}px;
+    }
+  }
+}
+@include margin-x();
+
+@mixin margin-top-x {
+  @for $i from 1 through 20 {
+    .mt#{5 * $i} {
+      margin-top: #{5 * $i}px;
+    }
+  }
+}
+@include margin-top-x();
+
+@mixin margin-left-x {
+  @for $i from 1 through 20 {
+    .ml#{5 * $i} {
+      margin-left: #{5 * $i}px;
+    }
+  }
+}
+@include margin-left-x();
+
+@mixin margin-right-x {
+  @for $i from 1 through 20 {
+    .mr#{5 * $i} {
+      margin-right: #{5 * $i}px;
+    }
+  }
+}
+@include margin-right-x();
+
+@mixin margin-bottom-x {
+  @for $i from 1 through 20 {
+    .mb#{5 * $i} {
+      margin-bottom: #{5 * $i}px;
+    }
+  }
+}
+@include margin-bottom-x();
+
+b.grey {
+  color: $grey;
+}
+b.link {
+  color: $link;
+}
+b.succ {
+  color: $success;
+}
+b.warn {
+  color: $warning;
+}
+b.err {
+  color: $error;
+}
+
+.autocolor {
+  filter: invert(1) saturate(0) contrast(100);
+}

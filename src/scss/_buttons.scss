@@ -1,0 +1,126 @@
+//reset
+button,
+a.btn {
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
+  padding: 12px 24px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: $base;
+  user-select: none;
+  -webkit-user-drag: none;
+  box-shadow:
+    -2px -2px 4px 0 rgba($white, 1),
+    inset 1px 1px 1px 0 rgba($white, 0.2),
+    2px 2px 4px 0 rgba($black, 0.2),
+    inset -1px -1px 1px 0 rgba($black, 0.15);
+  transition: 0.2s;
+
+  &:hover {
+    filter: saturate(90%);
+    transform: scale(0.95);
+  }
+}
+
+//basics
+button.round,
+a.round {
+  border-radius: 30px;
+}
+button.semi,
+a.semi {
+  border-radius: 10px;
+}
+button.out,
+a.out {
+  border-color: $base;
+}
+button.dis,
+a.dis {
+  cursor: not-allowed;
+  background: $grey;
+  color: $disabled;
+}
+
+//colors
+button.pri,
+a.pri {
+  background: $pri;
+}
+button.sec,
+a.sec {
+  background: $sec;
+  color: $white;
+}
+button.black,
+a.black {
+  background: $black;
+  color: $bg;
+}
+button.white,
+a.white {
+  background: $white;
+}
+button.link,
+a.link {
+  background: $link;
+  color: $white;
+}
+button.succ,
+a.succ {
+  background: $success;
+  color: $white;
+}
+button.warn,
+a.warn {
+  background: $warning;
+}
+button.err,
+a.err {
+  background: $error;
+  color: $white;
+}
+
+button.outdis,
+a.outdis {
+  cursor: not-allowed;
+  color: $grey;
+}
+button.outpri,
+a.outpri {
+  color: $pri;
+}
+button.outsec,
+a.outsec {
+  color: $sec;
+}
+button.outblack,
+a.outblack {
+  color: $black;
+}
+button.outwhite,
+a.outwhite {
+  color: $white;
+}
+button.outgrey,
+a.outgrey {
+  color: $grey;
+}
+button.outlink,
+a.outlink {
+  color: $link;
+}
+button.outsucc,
+a.outsucc {
+  color: $success;
+}
+button.outwarn,
+a.outwarn {
+  color: $warning;
+}
+button.outerr,
+a.outerr {
+  color: $error;
+}
