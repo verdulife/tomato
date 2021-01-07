@@ -123,13 +123,14 @@ function mouseOut() {
 
 function start() {
   const initial = "EMPEZAR";
-  let timeout = opts.each * 60;
+  let timeout = opts.each; //* 60;
 
   if (interval) {
     clearInterval(interval);
     interval = null;
     btn.removeEventListener("mouseenter", mouseIn, false);
     btn.removeEventListener("mouseleave", mouseOut, false);
+    btn.textContent = initial;
 
     setTimeout(() => {
       btn.textContent = initial;
@@ -141,6 +142,24 @@ function start() {
     interval = setInterval(() => {
       if (!isOver) btn.textContent = fancyTimeFormat(timeout);
       timeout -= 1;
+
+      if (timeout <= 1) {
+        clearInterval(interval);
+        interval = null;
+        btn.removeEventListener("mouseenter", mouseIn, false);
+        btn.removeEventListener("mouseleave", mouseOut, false);
+        btn.textContent = initial;
+
+        setTimeout(() => {
+          btn.textContent = initial;
+          openModal();
+        }, 1000);
+      }
     }, 1000);
   }
+}
+
+function reset() {
+  closeModal();
+  start();
 }

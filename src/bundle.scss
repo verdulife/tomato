@@ -15,6 +15,11 @@
 main {
   img {
     width: 120px;
+  }
+
+  h4 {
+    color: $white;
+    text-shadow: 0 2px 5px rgba($black, 0.4);
     margin-bottom: 5px;
   }
 
@@ -24,7 +29,9 @@ main {
     background: $bg;
     border-radius: 30px;
     margin-bottom: 10px;
-    box-shadow: -2px -2px 4px 0 rgba($white, 1), inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($white, 0.2), inset -1px -1px 1px 0 rgba($black, 0.4);
+    box-shadow: -2px -2px 4px 0 rgba($white, 1),
+      inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($white, 0.2),
+      inset -1px -1px 1px 0 rgba($black, 0.4);
   }
 
   .time-stop {
@@ -33,7 +40,9 @@ main {
     background: $bg;
     border-radius: 30px;
     margin-bottom: 20px;
-    box-shadow: -2px -2px 4px 0 rgba($white, 1), inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($white, 0.2), inset -1px -1px 1px 0 rgba($black, 0.4);
+    box-shadow: -2px -2px 4px 0 rgba($white, 1),
+      inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($white, 0.2),
+      inset -1px -1px 1px 0 rgba($black, 0.4);
   }
 
   .selector {
@@ -43,7 +52,9 @@ main {
     height: calc(100% - 8px);
     background: $pri;
     border-radius: 30px;
-    box-shadow: -2px -2px 4px 0 rgba($pri, 1), inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($pri, 0.2), inset -1px -1px 1px 0 rgba($black, 0.2);
+    box-shadow: -2px -2px 4px 0 rgba($pri, 1),
+      inset 1px 1px 1px 0 rgba($white, 0.2), 2px 2px 4px 0 rgba($pri, 0.2),
+      inset -1px -1px 1px 0 rgba($black, 0.2);
     transition: 500ms ease-out;
   }
 
@@ -74,4 +85,9 @@ main {
   button {
     width: 130px;
   }
+}
+
+.modal {
+  background: rgba($black, 0.7);
+  color: $white;
 }

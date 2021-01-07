@@ -2723,6 +2723,11 @@ pre.dark {
 
 main img {
   width: 120px;
+}
+
+main h4 {
+  color: #fafafa;
+  text-shadow: 0 2px 5px rgba(24, 31, 28, 0.4);
   margin-bottom: 5px;
 }
 
@@ -2791,5 +2796,10 @@ main .pos4 {
 
 main button {
   width: 130px;
+}
+
+.modal {
+  background: rgba(24, 31, 28, 0.7);
+  color: #fafafa;
 }
 /*# sourceMappingURL=bundle.css.map */
