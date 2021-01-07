@@ -90,4 +90,8 @@ main {
 .modal {
   background: rgba($black, 0.7);
   color: $white;
+
+  h1 {
+    margin-bottom: 20px;
+  }
 }

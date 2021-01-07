@@ -1,11 +1,13 @@
 const remote = require("electron").remote;
 const path = require("path");
+let pageTitle;
 
-function openModal() {
+function openModal(time) {
   const modal = new remote.BrowserWindow({
     center: true,
     transparent: true,
     frame: false,
+    title: time.toString(),
     webPreferences: {
       enableRemoteModule: true,
       nodeIntegration: true,
@@ -15,7 +17,11 @@ function openModal() {
   modal.loadFile(path.join(__dirname, "modal.html"));
   modal.setFullScreen(true);
 
-  // modal.webContents.openDevTools();
+  modal.on("close", () => {
+    start();
+  });
+
+  modal.webContents.openDevTools();
 }
 
 function closeModal() {
@@ -116,7 +122,7 @@ function mouseIn() {
   isOver = true;
   btn.textContent = "PARAR";
 }
-function mouseOut() {
+function mouseOut(timeout) {
   isOver = false;
   btn.textContent = fancyTimeFormat(timeout);
 }
@@ -137,7 +143,7 @@ function start() {
     }, 1000);
   } else {
     btn.addEventListener("mouseenter", mouseIn, false);
-    btn.addEventListener("mouseleave", mouseOut, false);
+    btn.addEventListener("mouseleave", mouseOut(timeout), false);
 
     interval = setInterval(() => {
       if (!isOver) btn.textContent = fancyTimeFormat(timeout);
@@ -152,14 +158,14 @@ function start() {
 
         setTimeout(() => {
           btn.textContent = initial;
-          openModal();
+          openModal(opts.stop);
         }, 1000);
       }
     }, 1000);
   }
 }
 
-function reset() {
-  closeModal();
-  start();
-}
+document.addEventListener("DOMContentLoaded", () => {
+  pageTitle = document.querySelector("title").textContent;
+  console.log(pageTitle);
+});

@@ -2802,4 +2802,8 @@ main button {
   background: rgba(24, 31, 28, 0.7);
   color: #fafafa;
 }
+
+.modal h1 {
+  margin-bottom: 20px;
+}
 /*# sourceMappingURL=bundle.css.map */
