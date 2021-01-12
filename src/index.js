@@ -12,15 +12,12 @@ if (require("electron-squirrel-startup")) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 600,
+    width: 300,
     height: 350,
-    minWidth: 300,
-    maxWidth: 600,
-    minHeight: 350,
-    maxHeight: 350,
     center: true,
     transparent: true,
     frame: false,
+    resizable: false,
     webPreferences: {
       enableRemoteModule: true,
       nodeIntegration: true,
@@ -31,7 +28,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, "index.html"));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished

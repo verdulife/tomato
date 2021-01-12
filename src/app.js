@@ -1,27 +1,29 @@
 const remote = require("electron").remote;
 const path = require("path");
-let pageTitle;
 
 function openModal(time) {
+  const param = time.toString();
   const modal = new remote.BrowserWindow({
-    center: true,
     transparent: true,
     frame: false,
-    title: time.toString(),
+    center: true,
+    resizable: false,
+    title: param,
     webPreferences: {
       enableRemoteModule: true,
       nodeIntegration: true,
     },
   });
 
-  modal.loadFile(path.join(__dirname, "modal.html"));
+  modal.setAlwaysOnTop(true, "screen");
   modal.setFullScreen(true);
+  modal.loadFile(path.join(__dirname, "modal.html"));
 
   modal.on("close", () => {
     start();
   });
 
-  modal.webContents.openDevTools();
+  // modal.webContents.openDevTools();
 }
 
 function closeModal() {
@@ -129,7 +131,7 @@ function mouseOut(timeout) {
 
 function start() {
   const initial = "EMPEZAR";
-  let timeout = opts.each; //* 60;
+  let timeout = opts.each * 60;
 
   if (interval) {
     clearInterval(interval);
@@ -165,7 +167,15 @@ function start() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  pageTitle = document.querySelector("title").textContent;
-  console.log(pageTitle);
-});
+const titleParams = remote.getCurrentWindow().getTitle();
+
+if (titleParams !== "tomato 🍅") {
+  const param = parseInt(titleParams) * 1000;
+  const progress = document.querySelector(".progress");
+
+  progress.classList.add(`secs${titleParams}`);
+
+  setTimeout(() => {
+    closeModal();
+  }, param);
+}

@@ -1,6 +1,6 @@
 {
-  "name": "quick_stretch",
-  "productName": "quick_stretch",
+  "name": "tomato",
+  "productName": "tomato",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
@@ -8,8 +8,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "publish": "electron-forge publish"
   },
   "keywords": [],
   "author": {
@@ -19,12 +18,14 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "assets/tomato.icns"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "quick_stretch"
+            "name": "tomato"
           }
         },
         {

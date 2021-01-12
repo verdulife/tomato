@@ -2799,11 +2799,63 @@ main button {
 }
 
 .modal {
-  background: rgba(24, 31, 28, 0.7);
+  position: relative;
+  background: rgba(24, 31, 28, 0.1);
   color: #fafafa;
 }
 
 .modal h1 {
   margin-bottom: 20px;
+}
+
+.modal .progress {
+  position: absolute;
+  width: 125vw;
+  height: 125vw;
+  background: rgba(255, 99, 71, 0.7);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.modal .secs10 {
+  -webkit-animation: grow 10s linear;
+          animation: grow 10s linear;
+}
+
+.modal .secs20 {
+  -webkit-animation: grow 20s linear;
+          animation: grow 20s linear;
+}
+
+.modal .secs30 {
+  -webkit-animation: grow 30s linear;
+          animation: grow 30s linear;
+}
+
+.modal .secs60 {
+  -webkit-animation: grow 60s linear;
+          animation: grow 60s linear;
+}
+
+@-webkit-keyframes grow {
+  from {
+    width: 125vw;
+    height: 125vw;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 125vw;
+    height: 125vw;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
 }
 /*# sourceMappingURL=bundle.css.map */
